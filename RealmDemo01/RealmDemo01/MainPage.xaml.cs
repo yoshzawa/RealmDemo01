@@ -13,5 +13,9 @@ namespace RealmDemo01
         {
             InitializeComponent();
         }
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+        }
     }
 }
