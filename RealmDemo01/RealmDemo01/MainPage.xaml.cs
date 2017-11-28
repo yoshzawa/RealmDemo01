@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using Realms;
 
 namespace RealmDemo01
 {
@@ -16,6 +17,8 @@ namespace RealmDemo01
         protected override void OnAppearing()
         {
             base.OnAppearing();
+            Realm realm = Realm.GetInstance();
+
         }
     }
 }
