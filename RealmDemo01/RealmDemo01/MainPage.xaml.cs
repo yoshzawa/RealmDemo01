@@ -17,7 +17,13 @@ namespace RealmDemo01
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            Realm realm = Realm.GetInstance();
+            try
+            {
+                Realm realm = Realm.GetInstance();
+            }catch(System.InvalidOperationException ex)
+            {
+                DisplayAlert(ex.Message, ex.StackTrace, "cancel");
+            }
 
         }
     }
